@@ -9,6 +9,9 @@ const registerRouter = require('./register/register-router');
 const server = express();
 
 server.use(express.json());
+server.get('/', (req,res)=>{
+    res.end(`name: Maribel`)
+});
 server.use('/api/users', usersRouter);
 server.use('/api/login', loginRouter);
 server.use('/api/register', registerRouter);
